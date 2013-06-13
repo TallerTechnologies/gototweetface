@@ -1,5 +1,4 @@
 import tornado
-from tornado.template import Template
 __author__ = 'moreno'
 
 from tornado import web
@@ -9,6 +8,6 @@ class FacebookHandler(web.RequestHandler):
 
     @web.asynchronous
     def get(self):
-        template = Template("<html><b> Hola viteh </b></html>")
-        self.write("<html><b> Hola viteh </b></html>")
+        template = "<html><b> Hola viteh </b></html>"
+        self.write(template)
         self.finish()
